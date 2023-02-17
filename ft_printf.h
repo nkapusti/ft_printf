@@ -6,7 +6,7 @@
 /*   By: akapusti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:32:50 by akapusti          #+#    #+#             */
-/*   Updated: 2023/02/08 17:15:31 by akapusti         ###   ########.fr       */
+/*   Updated: 2023/02/17 17:38:04 by akapusti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@
 void	ft_putchar(char c, int *len);
 void	ft_putstr(char *s, int *len);
 void	ft_putnbr(int n, int *len);
+void	ft_hex(unsigned long i, int *len, char cases);
+void	ft_pointer(void *ptr, int *len);
+void	ft_string(char *str, int *len);
+void	ft_unsigned(unsigned int i, int *len);
 void	ft_format(const char *format, va_list args, int *len);
-int	        ft_printf(const char *format, ...);
+int		ft_printf(const char *format, ...);
 
 #endif

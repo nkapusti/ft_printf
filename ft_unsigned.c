@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.c                                        :+:      :+:    :+:   */
+/*   ft_unsigned.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akapusti <akapusti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: akapusti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 18:59:40 by akapusti          #+#    #+#             */
-/*   Updated: 2023/02/17 16:15:05 by akapusti         ###   ########.fr       */
+/*   Created: 2023/02/17 17:33:15 by akapusti          #+#    #+#             */
+/*   Updated: 2023/02/17 17:39:53 by akapusti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_string(char *str, int *len)
+void	ft_unsigned(unsigned int i, int *len)
 {
-	if (str == NULL)
-		ft_putstr("(NULL)", len);
-	else
-		ft_putstr(str, len);
+	if (i >= 10)
+		ft_unsigned(i / 10, len);
+	ft_putchar(i % 10 + '0', len);
 }

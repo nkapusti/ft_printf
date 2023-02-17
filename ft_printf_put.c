@@ -6,7 +6,7 @@
 /*   By: akapusti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 17:07:43 by akapusti          #+#    #+#             */
-/*   Updated: 2023/02/14 13:33:13 by akapusti         ###   ########.fr       */
+/*   Updated: 2023/02/17 18:23:02 by akapusti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,19 @@
 void	ft_putchar(char c, int *len)
 {
 	write(1, &c, 1);
-	*len++;
+	*len += 1;
 }
 
 void	ft_putstr(char *s, int *len)
 {
 	while (*s)
 		ft_putchar(*s++, len);
+	if (s == NULL)
+	{
+		write(1, "(NULL)", 6);
+		*len += 6;
+		return ;
+	}
 }
 
 void	ft_putnbr(int n, int *len)
