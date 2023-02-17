@@ -6,7 +6,7 @@
 /*   By: akapusti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 17:07:43 by akapusti          #+#    #+#             */
-/*   Updated: 2023/02/08 17:13:57 by akapusti         ###   ########.fr       */
+/*   Updated: 2023/02/14 13:33:13 by akapusti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putchar(char c, int *len)
 void	ft_putstr(char *s, int *len)
 {
 	while (*s)
-		ft_putchar_fd(*s++, len);
+		ft_putchar(*s++, len);
 }
 
 void	ft_putnbr(int n, int *len)
@@ -29,7 +29,7 @@ void	ft_putnbr(int n, int *len)
 	if (n == -2147483648)
 	{
 		ft_putchar('-', len);
-		ft_putchar('2', len;
+		ft_putchar('2', len);
 		n = 147483648;
 	}
 	if (n < 0)

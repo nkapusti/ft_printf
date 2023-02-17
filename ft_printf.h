@@ -24,5 +24,7 @@
 void	ft_putchar(char c, int *len);
 void	ft_putstr(char *s, int *len);
 void	ft_putnbr(int n, int *len);
+void	ft_format(const char *format, va_list args, int *len);
+int	        ft_printf(const char *format, ...);
 
 #endif
