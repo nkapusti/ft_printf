@@ -1,26 +1,26 @@
 NAME	= libftprintf.a
 
-SRCS	= 
+SRCS	= ft_hex.c ft_pointer.c ft_string.c ft_ptintf_put.c ft_printf.c
 
 OBJS	= $(SRCS:.c=.o)
+
+HEADER  = ft_printf.h
+
+FLAGS	= -Wall -Wextra -Werror
 
 %.o : %c
 	gcc $(FLAGS) -c $< -I$(HEADER) -o $@
 
-RM	= rm -f
-
-CFLAGS	= -Wall -Wextra -Werror
-
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-			ar rcs $(NAME) $(OBJS)
+			ar rc $(NAME) $(OBJS)
 
 clean:
-			$(RM) $(OBJS)
+			rm -f $(OBJS)
 
 fclean:		clean
-			$(RM) $(NAME)
+			rm -f $(NAME)
 
 re:			fclean all
 
