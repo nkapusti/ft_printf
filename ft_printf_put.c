@@ -22,12 +22,6 @@ void	ft_putstr(char *s, int *len)
 {
 	while (*s)
 		ft_putchar(*s++, len);
-	if (s == NULL)
-	{
-		write(1, "(NULL)", 6);
-		*len += 6;
-		return ;
-	}
 }
 
 void	ft_putnbr(int n, int *len)
